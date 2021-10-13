@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType="fitXY"/>
+
+
+    <TextView
+        android:id="@+id/tv_song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="歌名"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        android:textColor="#FFF"/>
+    <TextView
+        android:id="@+id/tv_song_singer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="歌手"
+        android:layout_below="@id/tv_song_name"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textColor="#FFF"/>
+    <ImageView
+        android:id="@+id/cd"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@id/tv_song_singer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/cd"/>
+    <TextView
+        android:id="@+id/lyric_previous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="前一句"
+        android:layout_below="@id/cd"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="#D3D3D3"/>
+    <TextView
+        android:id="@+id/lyric_current"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前歌词"
+        android:layout_below="@id/lyric_previous"
+        android:textSize="18dp"
+        android:textAlignment="center"
+        android:textColor="#FFF"/>
+    <TextView
+        android:id="@+id/lyric_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="后一句"
+        android:layout_below="@id/lyric_current"
+        android:textAlignment="center"
+        android:textColor="#D3D3D3"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_process"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyric_next"
+        android:layout_marginTop="32dp">
+        <SeekBar
+            android:id="@+id/process"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/process_beg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0:00"
+            android:layout_below="@id/process"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="#FFF"/>
+
+        <TextView
+            android:id="@+id/process_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5:35"
+            android:layout_below="@id/process"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:textColor="#FFF"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_process">
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/play"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"/>
+        <ImageButton
+            android:id="@+id/last_song"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/last_song"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:layout_toLeftOf="@id/play"
+            android:layout_toStartOf="@id/play" />
+        <ImageButton
+            android:id="@+id/next_song"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/next_song"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/play"
+            android:layout_toEndOf="@id/play" />
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
