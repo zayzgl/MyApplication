@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/music_bg"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Music_Activity">
+
+    <TextView
+        android:id="@+id/song_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="歌曲名"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+
+    <ImageView
+        android:id="@+id/iv_music"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="15dp"
+        android:src="@drawable/music0" />
+
+    <TextView
+        android:id="@+id/lyric_previous"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_music"
+        android:layout_marginTop="16dp"
+        android:text="前一句"
+        android:textAlignment="center"
+        android:textColor="#D3D3D3" />
+
+    <TextView
+        android:id="@+id/lyric_current"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyric_previous"
+        android:text="当前歌词"
+        android:textAlignment="center"
+        android:textColor="#FFF"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/lyric_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lyric_current"
+        android:text="后一句"
+        android:textAlignment="center"
+        android:textColor="#D3D3D3" />
+
+    <SeekBar
+        android:id="@+id/sb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+        <TextView
+            android:id="@+id/tv_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00" />
+
+        <TextView
+            android:id="@+id/tv_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="00:00" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/play"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play" />
+
+        <ImageButton
+            android:id="@+id/last_song"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_toStartOf="@id/play"
+            android:layout_toLeftOf="@id/play"
+            android:scaleType="fitCenter"
+            android:src="@drawable/last_song" />
+
+        <ImageButton
+            android:id="@+id/next_song"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/play"
+            android:layout_toRightOf="@id/play"
+            android:scaleType="fitCenter"
+            android:src="@drawable/next_song" />
+
+        <ImageButton
+            android:id="@+id/play_form"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/single_circle"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            android:layout_toRightOf="@id/next_song"
+            android:layout_toEndOf="@id/next_song" />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
+
