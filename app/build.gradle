@@ -4,8 +4,8 @@ android {
     compileSdkVersion 31
     buildToolsVersion "31.0.0"
     defaultConfig {
-        applicationId "com.example.myapplication"
-        minSdkVersion 15
+        applicationId "com.example.myapp"
+        minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
